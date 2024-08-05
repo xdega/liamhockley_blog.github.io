@@ -35,10 +35,15 @@ origin_page: index
       <ol>
         {% for page in pages.byTag("posts", sortBy="publishDate=desc") %}
         <li class="pb-8">
-          <a href="{{  page.data['url']  }}">
-            <p>{{ page.data['title'] }}</p>
-          </a>
+          <div class="flex justify-between">
+            <p class="font-viga text-xl pb-1">{{ page.data['title'] }}</p>
+            <p class="font-viga text-slate-500">{{ page.data['publishDate'] }}</p>
+          </div>
+
           <p>{{ page.data['description'] }}</p>
+          <a class="pt-2" href="{{  page.data['url']  }}">
+            <p class="primary-gradient-text font-viga">MORE</p>
+          </a>
         </li>
         {% endfor %}
       </ol>

@@ -4,13 +4,27 @@
                 liamhockley</span><span class="text-4xl text-white">.me</span>
         </a>
     </h1>
-    <nav class="text-xl">
+    <nav class="text-xl pt-2">
+        <!-- Index or Blog Post -->
         {% if origin_page == "index" or origin_page == "blog_post" %}
-        <a class="primary-gradient-text" href="/">blog</a>
+        <a class="primary-gradient-text mr-4" href="/">blog</a>
         {% else %}
-        <a href="/">blog</a>
+        <a class="mr-4" href="/">blog</a>
         {% endif %}
-        <a href="#">projects</a>
+
+        <!-- Projects -->
+        {% if origin_page == "projects" %}
+        <a class="primary-gradient-text mr-4" href="#">projects</a>
+        {% else %}
+        <a class="mr-4" href="#">projects</a>
+        {% endif %}
+
+        <!-- About -->
+        {% if origin_page == "about" %}
+        <a class="primary-gradient-text" href="#">about</a>
+        {% else %}
         <a href="#">about</a>
+        {% endif %}
+
     </nav>
 </header>
