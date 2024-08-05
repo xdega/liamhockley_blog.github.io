@@ -18,17 +18,9 @@ Future<void> main(List<String> arguments) async {
     ..plugin(DraftingPlugin(
       showDrafts: arguments.contains("preview"),
     ))
-    ..plugin(RssPlugin(
-      site: RssSiteConfiguration(
-        title: "liamhockley.me",
-        description: "",
-        homePageUrl: "",
-      ),
-      pageToRssItemMapper: (RssSiteConfiguration config, Page page) {
-        return defaultPageToRssItemMapper(config, page)?.copyWith(
-          author: page.data["author"],
-        );
-      },
+    ..plugin(const TailwindPlugin(
+      input: "source/styles/tailwind.css",
+      output: "build/styles/tailwind.css",
     ));
 
   // Generate the static website.

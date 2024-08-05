@@ -1,7 +1,15 @@
-<header>
-    <h1>liamhockley<span>.me</span></h1>
-    <nav>
+<header class="pb-8 font-viga">
+    <h1><a href="/">
+            <span class="primary-gradient-text text-5xl tracking-tighter">
+                liamhockley</span><span class="text-4xl text-white">.me</span>
+        </a>
+    </h1>
+    <nav class="text-xl">
+        {% if origin_page == "index" or origin_page == "blog_post" %}
+        <a class="primary-gradient-text" href="/">blog</a>
+        {% else %}
         <a href="/">blog</a>
+        {% endif %}
         <a href="#">projects</a>
         <a href="#">about</a>
     </nav>

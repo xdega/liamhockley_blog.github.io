@@ -1,3 +1,4 @@
 layout: layouts/post.jinja
 tags: posts
 author: Liam Hockley
+origin_page: blog_post

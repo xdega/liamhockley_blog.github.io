@@ -1,5 +1,6 @@
 <!--
 title: liamhockley.me
+origin_page: index
 -->
 <!doctype html>
 
@@ -9,6 +10,10 @@ title: liamhockley.me
   <meta charset="utf-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -20,21 +25,20 @@ title: liamhockley.me
   <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <link href="/styles/styles.css" rel="stylesheet">
-  <link href="/styles/home.css" rel="stylesheet">
+  <link href="/styles/tailwind.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="px-3 bg-slate-700 text-white max-w-3xl mx-auto pt-3">
   {{ components.header() }}
   <main>
     <div>
-      <ol class="post-list">
+      <ol>
         {% for page in pages.byTag("posts", sortBy="publishDate=desc") %}
-        <li>
+        <li class="pb-8">
           <a href="{{  page.data['url']  }}">
-            <p class="title">{{ page.data['title'] }}</p>
+            <p>{{ page.data['title'] }}</p>
           </a>
-          <p class="description">{{ page.data['description'] }}</p>
+          <p>{{ page.data['description'] }}</p>
         </li>
         {% endfor %}
       </ol>
