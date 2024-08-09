@@ -1,6 +1,16 @@
+import 'package:args/args.dart';
 import 'package:static_shock/static_shock.dart';
 
 Future<void> main(List<String> arguments) async {
+  var parser = ArgParser();
+
+  // Add CLI command options.
+  parser.addFlag('deploy', defaultsTo: false);
+  parser.addFlag('preview', defaultsTo: false);
+
+  // Parse the CLI command options.
+  var options = parser.parse(arguments);
+
   // Configure the static website generator.
   final staticShock = StaticShock()
     // Here, you can directly hook into the StaticShock pipeline. For example,
@@ -15,13 +25,19 @@ Future<void> main(List<String> arguments) async {
     ..plugin(const PrettyUrlsPlugin())
     ..plugin(const RedirectsPlugin())
     ..plugin(const SassPlugin())
-    ..plugin(DraftingPlugin(
-      showDrafts: arguments.contains("preview"),
-    ))
-    ..plugin(const TailwindPlugin(
-      input: "source/styles/tailwind.css",
-      output: "build/styles/tailwind.css",
-    ));
+    ..plugin(
+      DraftingPlugin(
+        showDrafts: options['preview'],
+      ),
+    )
+    ..plugin(
+      TailwindPlugin(
+        input: "source/styles/tailwind.css",
+        output: "build/styles/tailwind.css",
+        tailwindPath:
+            options['deploy'] ? "./tailwindcss_deploy" : "./tailwindcss",
+      ),
+    );
 
   // Generate the static website.
   await staticShock.generateSite();
