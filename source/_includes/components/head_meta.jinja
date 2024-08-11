@@ -17,9 +17,6 @@
     <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="/styles/tailwind.css" rel="stylesheet">
-    <link href="/styles/markdown.css" rel="stylesheet">
-
     {% if origin_page == "blog_post" %}
     {# HLJS (Syntax Highlighting) #}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
@@ -27,4 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/dart.min.js"></script>
     <script>hljs.highlightAll();</script>
     {% endif %}
+
+    <link href="/styles/tailwind.css" rel="stylesheet">
+    <link href="/styles/markdown.css" rel="stylesheet">
 </head>
