@@ -113,4 +113,18 @@
     border-radius: 10px;
     margin-bottom: 1.5rem;
   }
+
+  ul {
+    list-style: circle;
+    margin-left: 2.5rem;
+    padding-left: 0.2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  ol {
+    list-style: decimal;
+    margin-left: 2.5rem;
+    padding-left: 0.2rem;
+    margin-bottom: 1.25rem;
+  }
 }
