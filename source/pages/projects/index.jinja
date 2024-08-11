@@ -1,0 +1,12 @@
+<h1>Projects</h1>
+<p>I like to frequently sandbox for fun, brainstorming, and learning purposes. Here is a collection of such mini
+    projects.</p>
+
+<h1>JavaScript</h1>
+{% for project in projects %}
+{% if project.category == "javascript" %}
+<h2>{{ project.title }}</h2>
+<p>{{ project.description }}</p>
+<a href="{{ project.url }}">View project</a>
+{% endif %}
+{% endfor %}
