@@ -2,6 +2,7 @@
 title: "Hello 2022: Blogging is Hard?"
 description: "This last year has been a real challenge to add content to this blog. Here's a brief update on what I am planning on working on as we move forward into 2022."
 publishDate: 2022-01-01
+outputDate: 1st January 2022
 ---
 
 # Hello 2022: Blogging is Hard?
