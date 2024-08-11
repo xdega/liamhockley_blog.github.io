@@ -2,7 +2,7 @@
 title: "And... we're back!"
 description: "It's time to update my personal website/blog. While I'm at it, why don't I share what I've been up to over the past couple of years? What have I been learning, and what are my growth plans moving forward?"
 publishDate: 2024-08-10
-draft: true
+outputDate: 10th August 2024
 ---
 
 # And... we're back!

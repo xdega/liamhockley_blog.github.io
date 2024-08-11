@@ -2,6 +2,7 @@
 title: "Proving The Concept"
 description: "When it comes to software engineering, a good proof of concept can go a long way in illustrating solutions. But what makes a good proof of concept? What should we consider? Let's dive into a more philosophical topic and discuss."
 publishDate: 2021-07-01
+outputDate: 1st July 2021
 ---
 
 # Proving The Concept

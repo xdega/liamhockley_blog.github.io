@@ -1,0 +1,40 @@
+origin_page: projects
+title: Liam Hockley's Projects
+projects:
+  - title: "Green Box Animation"
+    id: VwexgPm
+    description: "A fun little play around, animating a grid of green boxes. This was initially used as something interesting to show in my Github profile page, but has since been removed."
+    category: "javascript"
+  - title: "Typewriter DOM Component"
+    id: xxREdoZ
+    description: "This was my first experiment with creating a custom native DOM element. In this case, a typewriter effect."
+    category: "javascript"
+  - title: "Glitch Nav Bar"
+    id: dyqXarJ
+    description: "A pure CSS glitch effect for a navigation bar. Forked and adapted from a similar effect that I found elsewhere."
+    category: "javascript"
+  - title: Random Token Uniqueness Tester
+    id: "PozQRRv"
+    description: "A very simple script that generates very simple random tokens, and tests their uniqueness."
+    category: "javascript"
+  # TODO: Fix memory issues before re-enabling this project
+  # - title: "Pathfinding Visualiser"
+  #   id: "f9609db20e5e2e79e52a938d4b14b247"
+  #   description: "Brainstorming how to implement simple path-finding. Was an early brainstorming step to a much larger proprietary project."
+  #   category: "dart"
+  - title: "Minimal Stroked Text Snippet"
+    id: "b768cabe99e84056e05b2f71ca53d86e"
+    description: "A minimal solution to implementing stroked text in Flutter."
+    category: "dart"
+  - title: "Wavey ListView Animation"
+    id: "9f525c7b73bf062f2c50d9bb8a216215"
+    description: "A fun wavey animation for a ListView in Flutter."
+    category: "dart"
+  - title: "Learning Flutter Slivers"
+    id: "f7181bc580bc4277a51da76af3d2dec2"
+    description: "A simple Flutter project to learn how to use Slivers."
+    category: "dart"
+  - title: "Random Boxes in Horizontal List View"
+    id: "c630e498b49ef9df32a3ef912224d361"
+    description: "Throwing some random boxes into a horizontal ListView in Flutter, with random rotations."
+    category: "dart"

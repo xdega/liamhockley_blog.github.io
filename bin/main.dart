@@ -16,7 +16,7 @@ Future<void> main(List<String> arguments) async {
     ..plugin(const RedirectsPlugin())
     ..plugin(const SassPlugin())
     ..plugin(DraftingPlugin(
-      showDrafts: true, // arguments.contains("preview"),
+      showDrafts: arguments.contains("preview"),
     ))
     ..plugin(const TailwindPlugin(
       input: "source/styles/tailwind.css",

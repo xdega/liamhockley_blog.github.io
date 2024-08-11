@@ -1,0 +1,29 @@
+<h1>Projects</h1>
+<p>I like to frequently sandbox for fun, brainstorming, and learning purposes. Here is a collection of such mini
+    projects.</p>
+
+<h2 class="mb-1 pb-1">Dart</h2>
+{% for project in projects %}
+{% if project.category == "dart" %}
+<h3>{{project.title}}</h3>
+<p>{{project.description}}</p>
+<iframe style="width: 100%;
+  height: 810px;" src="https://dartpad.dev/?id={{ project.id }}?theme=dark"></iframe>
+{% endif %}
+{% endfor %}
+
+<h2 class="mb-1 pb-1">JavaScript</h2>
+{% for project in projects %}
+{% if project.category == "javascript" %}
+<h3>{{project.title}}</h3>
+<p>{{project.description}}</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="{{ project.id }}"
+    data-pen-title="{{ project.title }}" data-user="xdega"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/xdega/pen/{{ project.id }}">
+            {{ project.title }}</a> by Liam Hockley (<a href="https://codepen.io/xdega">@xdega</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+{% endif %}
+{% endfor %}
